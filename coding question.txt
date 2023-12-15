@@ -3,7 +3,9 @@
 function a() {
   const b = () => {
   let a = 20;
-    console.log("a", a)
+    console.log("a", a);
+
+
   };
   a = 10;
   b()
