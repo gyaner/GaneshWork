@@ -1,0 +1,99 @@
+1 )------------------------------------- fetch vs axios
+
+2 )-------------------------------------- Array Sort
+
+                                        var arr= ["b","v","f","i"];
+					console.log(arr.sort());
+
+3 )-------------------------------------- Sorting of the numbers
+
+					const points = [40, 100, 1, 5, 25, 10];
+					points.sort((a,b)=>a-b)
+
+4 )------------------------------------- Sorting array of object
+					
+					employees.sort((a, b) => {
+  					return a.age - b.age;
+					});
+
+5 )------------------- Array.isArray() Use
+
+6 )--------------------------------------function 
+
+
+
+varScoping() {
+  var x = 1;
+
+  if (true) {
+    var x = 2;
+    console.log(x); // will print 2
+  }
+
+  console.log(x); // will print 2
+}
+
+function letScoping() {
+  let x = 1;
+
+  if (true) {
+    let x = 2;
+    console.log(x); // will print 2
+  
+  console.log(x); // will print 1
+
+
+
+--------------------------------------------------------------------------
+
+8 )-------------- what is pure component in react
+
+9 )---------------Pure funcion in react js
+
+10 )-------------- Fetch vs Axios
+
+11 )-------------- React life cycle implment with functional component.
+
+12  ) ------------- Waht is memory leak in react js
+
+23  ) -------------- What is component willunmount
+
+24)--------------------What is view port
+
+25) -----------------mutiform page
+
+26)-----------------genrater
+
+27)----------------react js folder structer,(folder Wise)
+
+28)----------------What is redux -> Provider, root reducer, combine reducer ,store, 
+
+29 )---------------- diffrence b/w saga and thunk. ehat is thunk ? why we use it?
+30 )---------------Eroor boundry in functional component and classs c0mponent
+
+31 )---------------diffrence between const vs let
+
+32 )-----------------What is Dynamic routing
+
+33 )----------------find and filter diffrence
+
+34 )--------------   indexOf and findindex diffrence
+
+35 )--------------  WeakMap and WeakSet, option Chaining
+
+36 )--------------  Rules of Hooks
+
+🔴 Do not call Hooks inside conditions or loops.
+🔴 Do not call Hooks after a conditional return statement.
+🔴 Do not call Hooks in event handlers.
+🔴 Do not call Hooks in class components.
+🔴 Do not call Hooks inside functions passed to useMemo, useReducer, or useEffect.
+
+
+
+       
+
+
+
+
+

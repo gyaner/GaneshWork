@@ -1,0 +1,30 @@
+// Online Javascript Editor for free
+// Write, Edit and Run your Javascript code using JS Online Compiler
+
+console.log("Welcome to Programiz!");
+//closure
+function add(){
+    let a=100;
+    return function(){
+        console.log(a+2);
+    }
+}
+let result = add();
+result()
+
+//cuurrying 
+function addition(a){
+    return function(b){
+        return function(c){
+            return (a+b+c)
+        }
+    }
+}
+let re= addition(2)(3)(4)
+console.log(re);
+
+let sum=(a)=>(b)=>{
+    console.log(a+b)
+}
+let res= sum(4)(3)
+res

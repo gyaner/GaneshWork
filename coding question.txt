@@ -1,0 +1,232 @@
+1------------------------------------------------------------------------------------------------------------------------
+
+function a() {
+  const b = () => {
+  let a = 20;
+    console.log("a", a)
+  };
+  a = 10;
+  b()
+}
+ 
+a()
+
+
+
+
+2------------------------------------------------------------------------------------------------------------------------
+
+const arr=[1,4,5,6,,,5];
+console.log(arr);
+
+3-------------------------------------------------------USEContext-----------------------------------------------------------------
+
+                                       ----------------------parent js----------------
+
+     import { useState, createContext, useContext } from "react";                                             
+import Child from "./Child";
+export const ParentContext = createContext();
+function App() {
+  const [name, setName] = useState("Parent Name");
+
+  return (
+    <div>
+      <ParentContext.Provider value={name}>
+        Name from Parent {name}
+        <Child />                                                 (parent to  child pass data)  -->
+      </ParentContext.Provider>
+    </div>
+  );
+}
+export default App;
+
+----------------------------Child.js
+
+
+import React, { useContext } from "react";
+import { ParentContext } from "./App";
+export default function Child() {
+  const userName = useContext(ParentContext);
+  console.log(userName);
+  return <h1>hello --{userName}</h1>;
+}
+
+
+                                                          ----------------  Child to parent   -------------------------
+
+ ----------------------parent js----------------
+
+import "./styles.css";
+import React, { useState, createContext } from "react";
+export const userContext = createContext();
+import Child from "./Child";
+export default function App() {
+  const [name, setName] = useState("gyan");
+  return (
+    <userContext.Provider value={{ name, setName }}>
+      <h1>passed value{name}</h1>
+      <Child />
+    </userContext.Provider>
+  );
+}
+
+
+ child -------------------------child 
+
+import React, { useContext, useState } from "react";
+import { userContext } from "./App";
+
+export default function Child() {
+  console.log(userContext);
+  const { name, setName } = useContext(userContext);
+  const [newName, setNewname] = useState("");
+  // const userName = useContext(userContext);
+  //console.log(userName);
+  const handleName = (e) => {
+    setNewname(e.target.value);
+  };
+  const handleData = () => {
+    setName(newName);
+  };
+  return (
+    <>
+      <h1>Child componengt</h1>
+      <input type="text" name="newname" value={newName} onChange={handleName} />
+      <button onClick={handleData}>pass Data</button>
+    </>
+  );
+}
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+ add();
+console.log(a);
+function add(){
+console.log(a);
+var a=10;
+} 
+
+-----------------------------------------------
+
+ for(var i=0;i<5;i++){
+  setTimeout(function() {
+    console.log(i)
+  }, 3000);
+} 
+------------------------------------------------------
+
+function sum(){
+  setTimeout(function() {
+    console.log(i)
+  }, 3000);
+  var i=35;
+}
+sum(); 
+
+
+
+
+
+
+
+
+
+
+-------------------------------- -------------------------------- 
+
+const list=[{name:"gyan"},
+{name:"gyan"},{name:"gyandffsf"},{name:"dfgyan222"},{name:"fdsfgyan"},{name:"sdagyan2"}]
+
+
+let data=[];
+
+const de=list.map((item)=>{
+data.push(item.name);
+return {name:item.name};
+})
+
+console.log(data,"++++++++++",de) 
+-------------------------------- -------------------------------- 
+
+ function a() {
+  this.a = 10;
+  console.log(this)
+  const c = () => {
+    console.log(this.a);
+  };
+  function b() {
+  this.a = 20
+    c();
+  }
+  b();
+  console.log(this.a)
+}
+ 
+a(); 
+ -------------------------------- -------------------------------- 
+const test = {
+  name: "gyan",
+  func: function() {
+   console.log(this)
+ 
+    const that=this
+    setTimeout(function (){
+ 
+        console.log(`my name is ${this}`);
+    },10)
+  
+  },
+};
+test.func() 
+
+
+
+-----------------------------------------------------------------------------------------------
+
+
+Appp                         forwordref------------------useimprativeHandller
+
+
+import "./styles.css";
+import React, { useRef } from "react";
+import Child from "./Child";
+export default function App() {
+  const ref = useRef();
+
+  return (
+    <div className="App">
+      <Child ref={ref} />
+      <button onClick={() => ref.current.update()}>click</button>
+    </div>
+  );
+}
+
+
+import "./styles.css";
+import React, { useRef, forwardRef, useImperativeHandle } from "react";
+function Child(props, ref) {
+  //console.log(props, "++++++++++", ref);
+  useImperativeHandle(ref, () => {
+    return {
+      update,
+    };
+  });
+  function update() {
+    console.log("calleing herere");
+  }
+  return (
+    <div className="App">
+      <h1>Hello CodeSandbox</h1>
+    </div>
+  );
+}
+export default forwardRef(Child);
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+

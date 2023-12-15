@@ -1,0 +1,36 @@
+1 )------------------------------- implememt the program for debounce
+
+<input style="margin-top: 25px" onkeyup="debounced()" />
+<p id='p'></p>
+
+
+
+function debounce(func, delay = 3000) {
+  let timeoutId
+
+return function(){  
+  console.log()
+    clearTimeout(timeoutId)
+
+    timeoutId = setTimeout(() => {
+      func("33424")
+    }, delay)
+}
+}
+
+function doSomething(p) {
+  console.log("I am doing something",p,">>>>>>>>>>>>>")
+}
+
+const debounced = debounce(doSomething)
+
+
+
+2 ) ----------------------------------------  factrioal in javascript using recursive function.
+
+3  )---------------------------------------- selction sort 
+
+
+
+
+

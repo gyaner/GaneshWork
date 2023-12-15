@@ -1,0 +1,84 @@
+1) Question >>>>>>>>> Shallow copy and deep copy diffrence.Example.
+
+
+2)-----const data={name:"ganesh",ageData:{
+    age:29
+}}
+
+3 ) ------------const dt={...data}
+		//const dt = JSON.parse(JSON.stringify(data))
+		dt.name="vihan"
+		dt.ageData.age=7
+		console.log(dt)
+		console.log(data)
+
+4)  -------------const arr=[1,4,5,6,3,0,5];
+
+const data= arr.map((item)=>item>2)--------->>>>>>>>>>return true false 
+
+const data= arr.map((item)=>{
+if(item>2){
+return item;  --------->>>>>>>>>>>>>>>>>>>>>>>>output
+}
+});
+
+
+const data1=arr.filter((el)=>el>2)----------------->>>>>>>>>>>>>>>output
+
+console.log(data,"+++++++++++++",data1);
+
+
+3-)-----------------------------------------------------------------
+
+     const arr = [5, 5, 5, 2, 2, 2, 2, 2, 9, 4];
+const counts = {};
+
+for (const num of arr) {
+  counts[num] = counts[num] ? counts[num] + 1 : 1;
+}
+
+console.log(counts);
+console.log(counts[5], counts[2], counts[9], counts[4]);
+
+11) partiual hydration, dynamic loading+
+
+4)------------------------------------------------------------------
+
+const input1 = {a:1,b:3,c:20,d:12,e:21};
+const input2 = {a:12,b:23,c:10,d:12,e:21};
+
+output {d:12,e:21}
+
+5 ) ------------------------------------------------------------------
+
+// Remove the duplicacy in in array 
+
+let array = [1, 2, 3, 5, 2, 8, 9, 2]
+console.log([...new Set(array)]);
+
+6 ) ----------------------------------------------------------------------
+
+// How to find minimum key value in object
+
+var list = { "a":4, "b":0.5 , "c":0.35, "d":5 };
+var keys = Object.keys(list);
+var min = keys[0]; // ignoring case of empty list for conciseness
+var max = keys[0];
+var i;
+
+for (i = 1; i < keys.length; i++) {
+    var value = keys[i];
+    if (list[value] < list[min]) min = value;
+    if (list[value] > list[max]) max = value;
+}
+
+console.log(min, '-----', max)
+
+------------------------------------------------------------------------------
+
+
+
+9 )(------------------------------------------  && real means of this short circuit operater.
+
+
+0) ------------------------------------------render Props (render props are simply props of a component where you can pass functions. These functions need to return                                                                             elements, which will be used in rendering the components.)

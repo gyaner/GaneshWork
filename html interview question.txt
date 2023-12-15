@@ -1,0 +1,47 @@
+1- CSS Pseudo-classes
+
+2- CSS Pseudo-Element
+
+3- css varuable- The var() function is used to insert the value of a CSS variable.
+
+		CSS variables have access to the DOM, which means that you can create variables with local or global scope, change the 			variables with JavaScript, and change the variables based on media queries.
+
+		A good way to use CSS variables is when it comes to the colors of your design. Instead of copy and paste the same colors 		over and over again, you can place them in variables.
+
+
+
+4- Inline Vs Inline Block Vs Block
+
+5-  Spicity in HTML
+
+6- What is box model 
+
+7) what is webaccebility 
+
+8) web Api
+
+9) Sementic element
+
+10)  css and css3 difrence
+
+11) saas or scss( vaiable, nesting, mixing,partials thapa technical).
+
+12 ) breakpoint in css (define size in PX)
+
+13 ) position in page define.
+
+14 ) what is view port how it is define in css.
+
+
+15) what is masking.
+
+16 ) visibility hidden and none diffrence
+
+17 ) what is css and css3
+
+18 ) html and htm5
+
+
+
+
+ 

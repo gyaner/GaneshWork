@@ -1,0 +1,114 @@
+1 ---)------------------------  how to make this one center
+
+                 <div class="parent">
+ 			 <div class="child">Child </div>
+		</div>
+----------------css---------------------
+
+.parent{
+  display:flex;
+ /*  align-items:center;
+  justify-content:center; */ 
+
+  }
+.child{
+  margin:auto;
+}
+
+
+   .parent{
+      display:flex;
+      text-align:center;
+       justify-content:center;
+       width: 250px;
+         height: 250px;
+         background-color: red;
+    }
+    .child{
+      
+         margin:  auto;
+    }
+
+
+2--)        --------------------------- Desktop first approach-----------------------
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+}
+
+.flex-item-left {
+  background-color: #f1f1f1;
+  padding: 10px;
+  width: 50%;
+}
+
+.flex-item-right {
+  background-color: dodgerblue;
+  padding: 10px;
+  width: 50%;
+}
+
+/* Responsive layout - makes a one column-layout instead of two-column layout */
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>Responisve Flexbox</h1>
+
+
+
+<div class="flex-container">
+  <div class="flex-item-left">1</div>
+  <div class="flex-item-right">2</div>
+</div>
+
+</body>
+</html>
+------------------------------------------------------------------end here -----------------------
+
+
+import "./styles.css";
+import React, { useEffect, useState } from "react";
+export default function App() {
+  const [count, setCount] = useState(0);
+  const [start, setrStart] = useState(true);
+
+  useEffect(() => {
+    if (start == true) {
+      let id = setInterval(() => {
+        setCount((oldcount) => oldcount + 2);
+      }, 3000);
+      return () => {
+        clearInterval(id);
+      };
+    }
+  }, [start]);
+
+  const handleStart = () => {
+    setrStart(false);
+    setCount(0);
+  };
+  return (
+    <>
+      <div className="App">count :{count}</div>
+      <button onClick={handleStart}> startd </button>
+    </>
+  );
+}
